@@ -99,7 +99,7 @@ class FloatingActionItem extends Component {
   }
 
   renderButton() {
-    const { buttonSize, icon, color, shadow } = this.props;
+    const { buttonSize, icon, color, shadow,iconWidth,iconHeight } = this.props;
 
     let iconStyle;
 
