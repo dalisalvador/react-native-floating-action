@@ -116,15 +116,23 @@ class FloatingActionItem extends Component {
       borderRadius: buttonSize / 2
     };
 
+
+    let iconSize = {};
+
+    if (iconWidth) iconSize.width = iconWidth;
+    if (iconHeight) iconSize.height = iconHeight;
+
+
+
     return (
       <View
         key="button"
-        style={[styles.button, propStyles, shadow]}
+        style={[styles.button, {backgroundColor: color}, shadow]}
       >
         {React.isValidElement(icon) ? (
           icon
         ) : (
-          <Image style={iconStyle} source={icon} />
+          <Image style={[iconStyle, iconSize]} source={icon} />
         )}
       </View>
     );
